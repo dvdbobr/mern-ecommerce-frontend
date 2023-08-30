@@ -1,0 +1,232 @@
+.navbar {
+  font-family: "KoHo", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  width: 100vw;
+  height: 68px;
+  z-index: 100;
+}
+
+.navbar-right,
+.navbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 300px;
+}
+
+.navbar-right {
+  position: relative;
+}
+
+.navbar-right div {
+  margin-right: 20px;
+}
+
+.searchInput {
+  position: absolute;
+  left: 400px;
+  top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput input {
+  height: 36px;
+  margin-right: 8px;
+  padding: 6px;
+  font-size: 20px;
+}
+
+.navbarCart {
+  position: relative;
+  padding-top: 10px;
+}
+
+.cartCounter {
+  position: absolute;
+  background-color: #4dd8d8;
+  text-align: center;
+  font-weight: bold;
+  color: crimson;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  top: 0px;
+  left: 26px;
+}
+
+.logo {
+  width: 200px;
+  height: 68px;
+  margin-right: 20px;
+}
+
+.logo img {
+  width: 100%;
+  height: 68px;
+  object-fit: cover;
+  padding-bottom: 7px;
+}
+
+.navbarLogin {
+  position: relative;
+  width: 110px;
+}
+
+.navbarLogin:hover .loggedIn {
+  visibility: visible;
+}
+
+.loggedIn {
+  position: absolute;
+  width: 150px;
+  background-color: rgb(216, 77, 77);
+  visibility: hidden;
+  right: 0;
+  text-align: center;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.loggedIn a {
+  color: #fff;
+}
+
+.loggedIn ul {
+  list-style: none;
+}
+
+.loggedIn span:hover {
+  cursor: pointer;
+}
+
+.logoutArrow {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  /* padding-top: 12px; */
+}
+
+.logoutModal {
+  z-index: 10;
+  color: black;
+  position: fixed;
+  width: 400px;
+  height: 250px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 20px;
+  top: 35vh;
+  left: 40vw;
+}
+
+.logoutModal button {
+  width: 100px;
+  height: 40px;
+  font-size: 1.3rem;
+  margin-top: 70px;
+}
+
+.logoutModal button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.logoutModalOverlay {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.logoutConfirmBtn {
+  margin-left: 158px;
+  background-color: crimson;
+}
+
+.logoutConfirmBtn a {
+  font-size: 1.3rem;
+}
+
+.hamburgerMenu {
+  /* position: absolute;
+    top: 17px;
+    left: 48px; */
+}
+
+.hamburgerMenu:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.sideMenu {
+  position: absolute;
+  padding: 40px;
+  font-size: 1.6rem;
+  left: 0;
+  top: 60px;
+  color: black;
+  background-color: rgb(216, 77, 77);
+  color: #fff;
+  z-index: 10;
+}
+
+.sideMenu ul {
+  list-style: none;
+}
+
+.sideMenu ul ul {
+  list-style: none;
+  padding: 5px 20px;
+  margin: 5px 10px;
+}
+
+.sideMenu ul a,
+.sideMenu ul ul a {
+  color: #fff;
+}
+
+.closeSideMenu {
+  animation: sideMenuAnimationClose 1s;
+  animation-fill-mode: forwards;
+}
+
+.openSideMenu {
+  animation: sideMenuAnimationOpen 1s;
+}
+
+@keyframes sideMenuAnimationOpen {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sideMenuAnimationClose {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar-right {
+    display: none;
+  }
+}

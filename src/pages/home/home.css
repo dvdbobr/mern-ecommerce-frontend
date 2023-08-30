@@ -1,0 +1,30 @@
+body {
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+  font-family: "KoHo", sans-serif;
+}
+
+.main {
+  padding-top: 30px;
+  max-width: 1250px;
+  min-width: 100vh;
+  margin: 0 auto;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  font-family: "KoHo", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+a:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+@media (max-width: 550px) {
+  .main {
+    box-shadow: none;
+  }
+}
