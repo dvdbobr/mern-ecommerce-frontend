@@ -1,20 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 // import cookies from 'js-cookie'
 import { useSelector, useDispatch } from "react-redux";
 // import { listProducts } from "../../redux/actions/productAction";
-import Navbar from "../../components/navbar/navbar.component";
+// import Navbar from "../../components/navbar/navbar.component";
 // import Card from "../../components/card/card.component";
 import Spinner from "../../components/spinner/spinner.component";
 import Card from "../../components/card/card.component";
 // import { useParams } from "react-router";
 // import Paginate from "../../components/paginate/paginate.component";
-import axios from "axios";
-import { allProducts, listProducts } from "../../redux/actions/productActions";
+import { listProducts } from "../../redux/actions/productActions";
 import { useParams } from "react-router-dom";
 function Home() {
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.productsList);
-  const { loading, error, products, pages, page } = productList;
+  const { loading, error, products } = productList; //, pages, page
   //   const userLogin = useSelector((state) => state.userLogin);
   //   const { userInfo } = userLogin;
   const params = useParams();
