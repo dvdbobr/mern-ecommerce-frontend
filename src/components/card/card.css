@@ -1,0 +1,74 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 270px;
+  height: 480px;
+  margin: 10px 1rem;
+  padding: 15px;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-weight: bold;
+  /* background-color: #fff;
+    color: #333; */
+}
+.card > span {
+  font-size: 1.5rem;
+}
+.card h2 {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  overflow: hidden;
+  height: 30px;
+}
+
+.cardImg {
+  width: 100%;
+  height: 280px;
+  display: block;
+  /* object-fit:cover */
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardFunctions {
+  display: flex;
+  margin-top: 1.3rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buyBtn {
+  width: 100px;
+  height: 40px;
+  background-color: #4dd8d8;
+  border: 1px solid;
+}
+.cardFunctions button {
+  font-size: 1.5rem;
+}
+.cardFunctions button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.viewBtn {
+  width: 100%;
+  height: 40px;
+  color: black;
+  text-align: center;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background-color: #4dd8d8;
+}
+.readMore {
+  color: blue;
+}
+.readMore:hover {
+  cursor: pointer;
+}
