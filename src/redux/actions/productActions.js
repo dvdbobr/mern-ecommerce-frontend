@@ -19,7 +19,7 @@ export const allProducts = () => async (dispatch) => {
     dispatch({ type: ALL_PRODUCT_LIST_FAILURE, payload: err.message });
   }
 };
-
+const url = "https://mern-ecommerce-backend-5w9x.onrender.com";
 export const listProducts =
   (page = "", keyword = "") =>
   async (dispatch) => {
@@ -28,7 +28,7 @@ export const listProducts =
     });
     try {
       const { data } = await axios.get(
-        `/api/products/paginated?keyword=${keyword}&page=${page}`
+        `${url}/api/products/paginated?keyword=${keyword}&page=${page}`
       );
       dispatch({ type: PRODUCT_LIST_SUCCESS, payload: { data: data } });
     } catch (err) {
