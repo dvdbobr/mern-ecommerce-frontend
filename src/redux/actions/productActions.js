@@ -30,6 +30,7 @@ export const listProducts =
       const { data } = await axios.get(
         `${url}/api/products/paginated?keyword=${keyword}&page=${page}`
       );
+      console.log(data);
       dispatch({ type: PRODUCT_LIST_SUCCESS, payload: { data: data } });
     } catch (err) {
       dispatch({ type: PRODUCT_LIST_FAILURE, payload: err.message });

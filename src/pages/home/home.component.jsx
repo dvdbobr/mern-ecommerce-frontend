@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 // import cookies from 'js-cookie'
 import { useSelector, useDispatch } from "react-redux";
 // import { listProducts } from "../../redux/actions/productAction";
-// import Navbar from "../../components/navbar/navbar.component";
-// import Card from "../../components/card/card.component";
+import Navbar from "../../components/navbar/navbar.component";
 import Spinner from "../../components/spinner/spinner.component";
 import Card from "../../components/card/card.component";
 // import { useParams } from "react-router";
@@ -32,7 +31,7 @@ function Home() {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="main">
         {loading ? (
           <Spinner />
