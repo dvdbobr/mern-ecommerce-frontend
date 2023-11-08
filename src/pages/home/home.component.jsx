@@ -6,22 +6,19 @@ import Navbar from "../../components/navbar/navbar.component";
 import Spinner from "../../components/spinner/spinner.component";
 import Card from "../../components/card/card.component";
 // import { useParams } from "react-router";
-// import Paginate from "../../components/paginate/paginate.component";
+import Paginate from "../../components/paginate/paginate.component";
 import { listProducts } from "../../redux/actions/productActions";
 import { useParams } from "react-router-dom";
-function Home() {
+const Home = () => {
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.productsList);
-  const { loading, error, products } = productList; //, pages, page
+  const { loading, error, products, pages, page } = productList;
   //   const userLogin = useSelector((state) => state.userLogin);
   //   const { userInfo } = userLogin;
   const params = useParams();
   const pageNumber = params.pageNumber || 1;
   const keyword = params.keyword;
   useEffect(() => {
-    // const cookie = cookies.get('ut')
-    // if (cookie)
-    // console.log(cookie);
     dispatch(listProducts(pageNumber, keyword));
   }, [dispatch, pageNumber, keyword]);
   // useEffect(() => {
@@ -57,12 +54,12 @@ function Home() {
                 <h2>No Products Found</h2>
               )}
             </div>
-            {/* <Paginate pages={pages} page={page} keyword={keyword}></Paginate> */}
+            <Paginate pages={pages} page={page} keyword={keyword}></Paginate>
           </>
         )}
       </div>
     </>
   );
-}
+};
 
 export default Home;

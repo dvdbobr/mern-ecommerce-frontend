@@ -4,6 +4,7 @@ import "./components/spinner/spinner.css";
 import "./pages/home/home.css";
 import "./components/card/card.css";
 import "./components/navbar/navbar.css";
+import "./components/paginate/paginate.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
@@ -11,6 +12,12 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="home" element={<Home />} />
+        <Route
+          exact
+          path="/search/:keyword/page/:pageNumber"
+          element={<Home />}
+        />
+        <Route exact path="/page/:pageNumber" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

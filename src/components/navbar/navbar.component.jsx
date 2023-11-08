@@ -12,7 +12,7 @@ import { logout } from "../../redux/actions/userActions";
 //   deleteShippingAddress,
 //   removeAllFromCart,
 // } from "../../redux/actions/cartAction";
-function Navbar() {
+const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [menuHandler, setMenuHandler] = useState(true);
@@ -175,6 +175,6 @@ function Navbar() {
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;
