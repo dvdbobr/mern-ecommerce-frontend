@@ -1,18 +1,18 @@
 import React from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Card(props) {
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const onViewClick = () => {
-    console.log("click");
-    // navigate(`/details/${props.id}`);
+    navigate(`/details/${props.id}`);
   };
   const shortenDescription = (description) => {
     return description.slice(0, 25) + "...";
   };
+
   return (
-    <div className="card">
+    <div className="card" key={props.id}>
       <img className="cardImg" src={props.img} alt="" />
       <h2>
         {props.title.split(" ").length > 3

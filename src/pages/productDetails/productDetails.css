@@ -1,0 +1,122 @@
+.productDetailContainer {
+    margin-top: 2rem;
+    width: 100vw;
+    height:65vh;
+}
+
+.productDetailInnerContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.productDetailInnerContainer img {
+    width: 30%;
+}
+
+.productDetails {
+    font-size: 2rem;
+    padding: 0 4rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.productDetails>span{
+    font-size:3rem;
+    color: #28a745;
+    font-weight: bold;
+}
+.productDetails>h2{
+    color: #D84D4D;
+}
+.productDetails button {
+    width: 150px;
+    height: 50px;
+    font-size: 2rem;
+}
+
+.productDetails button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.detailsContainer {
+    height: 500px
+}
+
+.relatedTitle {
+    margin-left: 20vw;
+    font-size: 3rem;
+}
+
+.selectedError {
+    z-index: 20;
+    position: absolute;
+    top: 30vh;
+    left: 40vw;
+    width: 500px;
+    padding: 20px;
+    background-color: crimson;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.productDetailsCart {
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    text-align: left;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.productDetailsCart table {
+    font-size: 1.5rem;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0 8px;
+}
+
+.productDetailsCart table tr {
+    border-bottom: 1px solid gray;
+}
+
+.productDetailsCart table tr td {
+    padding: 10px;
+}
+
+.productDetailsCart table tr td select {
+    width: 100px;
+    height: 40px;
+    font-size: 1.3rem;
+    padding: 7px;
+}
+
+.addToCartBtn {
+    padding: 8px;
+    margin-top: 20px;
+    background-color: #4dd8d8;
+    border: 1px solid;
+    font-size: 2rem;
+    border: 1px transparent;
+    border-radius: 55px;
+    color: #fff;
+}
+
+.success {
+    color: #28a745;
+}
+
+.danger {
+    font-size: 1.3rem;
+    text-align: center;
+    color: crimson;
+}
