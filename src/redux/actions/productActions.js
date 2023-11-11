@@ -10,7 +10,7 @@ import {
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,
   SELECTED_PRODUCT,
-} from "../constants/productConstant";
+} from "../constants/productConstants";
 
 export const allProducts = () => async (dispatch) => {
   dispatch({

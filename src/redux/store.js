@@ -8,22 +8,30 @@ import {
 } from "./reducers/productReducers";
 import { userLoginReducer } from "./reducers/userReducers";
 //, productDeleteReducer, productCreateReducer, productUpdateReducer
-// import { cartReducer } from './reducers/cartReducers';
-// import { makeOrderReducer, orderDetailsReducer, userOrdersReducer } from './reducers/orderReducer';
+import { cartReducer } from "./reducers/cartReducers";
+import {
+  makeOrderReducer,
+  orderDetailsReducer,
+  userOrdersReducer,
+} from "./reducers/orderReducers";
 
-// const cartItemsFromStorage = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : []
-// const shippingAddressFromStorage = localStorage.getItem('shippingAddress') ? JSON.parse(localStorage.getItem('shippingAddress')) : {}
+const cartItemsFromStorage = localStorage.getItem("cartItems")
+  ? JSON.parse(localStorage.getItem("cartItems"))
+  : [];
+const shippingAddressFromStorage = localStorage.getItem("shippingAddress")
+  ? JSON.parse(localStorage.getItem("shippingAddress"))
+  : {};
 // const paymentMethodFromStorage = localStorage.getItem('paymentMethod') ? JSON.parse(localStorage.getItem('paymentMethod')) : ''
 // const selectedItemFromStorage = localStorage.getItem('selectedItem') ? JSON.parse(localStorage.getItem('selectedItem')) : ''
 const initialState = {
   // userLogin: {
   //     userInfo: localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null
   // },
-  // cart: {
-  //     cartItems: cartItemsFromStorage,
-  //     shippingAddress: shippingAddressFromStorage,
-  //     paymentMethod: paymentMethodFromStorage
-  // },
+  cart: {
+    cartItems: cartItemsFromStorage,
+    shippingAddress: shippingAddressFromStorage,
+    // paymentMethod: paymentMethodFromStorage
+  },
   // selectedItem: selectedItemFromStorage
 };
 const reducer = combineReducers({
@@ -31,13 +39,13 @@ const reducer = combineReducers({
   allProductsList: allProductsListReducer,
   productsList: productListReducer,
   productDetails: productDetailsReducer,
+  cart: cartReducer,
   // deleteProduct: productDeleteReducer,
   // productCreate: productCreateReducer,
   // productUpdate:productUpdateReducer,
-  // cart: cartReducer,
-  // makeOrder: makeOrderReducer,
-  // orderDetails: orderDetailsReducer,
-  // userOrders: userOrdersReducer,
+  makeOrder: makeOrderReducer,
+  orderDetails: orderDetailsReducer,
+  userOrders: userOrdersReducer,
 });
 //const middleware = [thunk]
 //const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE || compose
