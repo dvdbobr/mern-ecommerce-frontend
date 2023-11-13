@@ -22,18 +22,6 @@ const Order = () => {
   const { userInfo } = userLogin;
   const { shippingAddress, paymentMethod, cartItems } = cart;
 
-  const calculateItemsTotalPrice = () => {
-    setItemsTotalPrice(
-      cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
-    );
-  };
-  const calculateTotalTax = () => {
-    setTotalTax(totalItemsPrice * 0.15);
-  };
-  const calculateTotalPrice = () => {
-    setTotalPrice(totalItemsPrice + totalItemsPrice * 0.15);
-  };
-
   const newOrder = useSelector((state) => state.makeOrder);
   const { order, loading, error } = newOrder;
   const completeOrderHandler = () => {
@@ -54,13 +42,24 @@ const Order = () => {
     if (!userInfo) navigate("/login");
   }, [navigate, userInfo]);
   useEffect(() => {
+    const calculateItemsTotalPrice = () => {
+      setItemsTotalPrice(
+        cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
+      );
+    };
+    const calculateTotalTax = () => {
+      setTotalTax(totalItemsPrice * 0.15);
+    };
+    const calculateTotalPrice = () => {
+      setTotalPrice(totalItemsPrice + totalItemsPrice * 0.15);
+    };
     calculateItemsTotalPrice();
     calculateTotalTax();
     calculateTotalPrice();
     if (order) {
       navigate(`/order/${order._id}`);
     }
-  }, [order, totalPrice, totalItemsPrice, totalTax]);
+  }, [order, totalPrice, totalItemsPrice, totalTax, navigate, cartItems]);
 
   return (
     <>
