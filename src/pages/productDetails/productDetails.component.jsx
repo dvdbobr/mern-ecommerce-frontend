@@ -99,20 +99,6 @@ const ProductDetails = () => {
                   <button className="addToCartBtn" onClick={addToCartHandler}>
                     Add To Cart
                   </button>
-                  {/* <div className="productDetailsCartRow">Price: <span>{selectedProduct.price}</span></div> */}
-                  {/* {
-                                            selectedProduct.countInStock > 0 ? (
-                                                <>
-                                                    <div className="productDetailsCartRow">
-                                                        Status: <span className="success">
-                                                            In Stock
-                                                        </span>
-                                                    </div>
-
-                                                </>
-                                            ) :
-                                                <span className="danger">Out Of Stock</span>
-                                        } */}
                 </div>
               </div>
             </div>

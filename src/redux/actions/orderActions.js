@@ -26,7 +26,11 @@ export const makeOrder = (order) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.post("/api/order", order, config);
+    const { data } = await axios.post(
+      `${process.env.REACT_APP_BACKEND_URL}/api/order`,
+      order,
+      config
+    );
     order.orderItems.forEach(async (item) => {
       await axios.put(
         `${process.env.REACT_APP_BACKEND_URL}/api/products/updateProductStock/${item.product}`,

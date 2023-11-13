@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Paginate = ({ pages, page, keyword }) => {
-  console.log(keyword);
   return (
     pages > 1 && (
       <>

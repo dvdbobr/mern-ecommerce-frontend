@@ -1,0 +1,88 @@
+.orderContainer {
+  margin: 2rem 15vw;
+  height: 500px;
+  width: 70vw;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.orderLeft,
+.orderRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.orderLeft {
+  width: 70%;
+}
+
+.orderRight {
+  background-color: rgba(128, 128, 128, 0.15);
+  border: 2px solid;
+  border-radius: 10px;
+  height: 400px;
+  padding: 20px;
+  width: 30%;
+  margin-left: 6rem;
+}
+
+.orderBtn {
+  height: 60px;
+  padding: 10px;
+  font-size: 1.3rem;
+  background-color: #4dd8d8;
+  color: #fff;
+  font-weight: bold;
+  border: 1px transparent;
+  border-radius: 55px;
+}
+
+.orderRight button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.orderCompleted {
+  text-align: center;
+  font-size: 3rem;
+  color: #4caf50;
+}
+
+.myOrdersDetailBtn {
+  padding: 10px;
+}
+
+.myOrdersTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+  margin: 2rem auto;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.myOrdersTable td,
+.myOrdersTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.myOrdersTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.myOrdersTable tr:hover {
+  background-color: #ddd;
+}
+.myOrdersTable thead th {
+  color: #ffffff;
+  background: #4fc3a1;
+}
+
+.myOrdersTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4caf50;
+  color: white;
+}

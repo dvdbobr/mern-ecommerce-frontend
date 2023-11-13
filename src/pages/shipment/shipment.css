@@ -1,0 +1,14 @@
+.shipmentForm {
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.shipmentForm label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.shipmentForm label input {
+  margin-right: 20px;
+}

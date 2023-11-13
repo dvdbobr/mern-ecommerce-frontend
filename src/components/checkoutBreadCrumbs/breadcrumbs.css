@@ -1,0 +1,21 @@
+.breadcrumbs {
+  width: 610px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+.breadcrumbs a {
+  font-size: 1.8rem;
+}
+.previousBreadcrumbs {
+  color: blue;
+}
+#disabledbBreadcrumbs {
+  opacity: 0.5;
+}
+#disabledbBreadcrumbs:hover {
+  cursor: default;
+}
+.breadcrumbsArrow {
+  margin: 0 10px;
+  font-weight: bold;
+}

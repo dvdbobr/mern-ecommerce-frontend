@@ -8,10 +8,11 @@ import { FcSearch } from "react-icons/fc";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../redux/actions/userActions";
-// import {
-//   deleteShippingAddress,
-//   removeAllFromCart,
-// } from "../../redux/actions/cartAction";
+import {
+  deleteShippingAddress,
+  removeAllFromCart,
+} from "../../redux/actions/cartActions";
+
 const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -21,8 +22,8 @@ const Navbar = () => {
   const [keyword, setKeyword] = useState("");
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
-  //   const cart = useSelector((state) => state.cart);
-  //   const { cartItems } = cart;
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
   const changeMenuHandler = () => {
     setMenuHandler(!menuHandler);
   };
@@ -30,8 +31,8 @@ const Navbar = () => {
     setLogoutConfirm(true);
     setLogoutPopup(false);
     dispatch(logout());
-    // dispatch(removeAllFromCart());
-    // dispatch(deleteShippingAddress());
+    dispatch(removeAllFromCart());
+    dispatch(deleteShippingAddress());
     navigate("/");
   };
   const logoutHandler = () => {
@@ -147,7 +148,7 @@ const Navbar = () => {
             <FaShoppingCart />{" "}
           </Link>
           <span className="cartCounter">
-            {/* {cartItems ? cartItems.length : 0} */}
+            {cartItems ? cartItems.length : 0}
           </span>
         </div>
         {logoutPopup ? (

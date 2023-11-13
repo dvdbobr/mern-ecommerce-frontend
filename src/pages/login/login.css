@@ -1,0 +1,58 @@
+.loginContainer {
+  width: 50vw;
+  margin: 2rem auto;
+  height: 600px;
+  font-size: 2rem;
+  background-color: rgba(128, 128, 128, 0.15);
+  padding: 20px 40px;
+  border: 2px solid;
+  border-radius: 10px;
+  position: relative;
+}
+.loginContainer h1 {
+  margin-bottom: 1rem;
+}
+.loginContainer form button {
+  cursor: pointer;
+}
+.loginContainer form input,
+.loginContainer form button {
+  width: 100%;
+  padding: 15px;
+  font-size: 2rem;
+}
+.loginForm {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.password {
+  position: relative;
+}
+.password input {
+  width: 90%;
+}
+.password span {
+  position: absolute;
+  right: 30px;
+  top: 17px;
+}
+.password span:hover {
+  cursor: pointer;
+}
+.loginError {
+  width: 100%;
+  background: crimson;
+  padding: 15px;
+}
+.loginAndRegisterAccount {
+  position: absolute;
+  bottom: 20px;
+  justify-self: flex-end;
+  margin-top: 1rem;
+}
+.loginAndRegisterAccount a {
+  font-size: 2rem;
+  color: mediumblue;
+}

@@ -1,0 +1,37 @@
+.paymentMethodContainer {
+  width: 400px;
+  margin: 2rem auto;
+  height: 300px;
+  font-size: 2rem;
+  background-color: rgba(128, 128, 128, 0.15);
+  padding: 20px 40px;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+.paymentMethodContainer form {
+  width: 100%;
+}
+
+.paymentMethodForm {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.paymentMethodForm button {
+  width: 100%;
+  padding: 15px;
+  font-size: 2rem;
+}
+.paymentMethodForm button:hover {
+  cursor: pointer;
+}
+.inputPayment {
+  display: flex;
+  align-items: center;
+}
+.inputPayment label {
+  margin-left: 30px;
+}
