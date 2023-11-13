@@ -26,9 +26,9 @@ const shippingAddressFromStorage = localStorage.getItem("shippingAddress")
 const paymentMethodFromStorage = localStorage.getItem("paymentMethod")
   ? JSON.parse(localStorage.getItem("paymentMethod"))
   : "";
-const selectedItemFromStorage = localStorage.getItem("selectedItem")
-  ? JSON.parse(localStorage.getItem("selectedItem"))
-  : "";
+// const selectedItemFromStorage = localStorage.getItem("selectedItem")
+//   ? JSON.parse(localStorage.getItem("selectedItem"))
+//   : "";
 
 const initialState = {
   userLogin: {
