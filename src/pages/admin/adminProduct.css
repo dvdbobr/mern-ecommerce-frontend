@@ -1,0 +1,53 @@
+.adminAddProduct {
+  margin-left: 85vw;
+  margin-top: 2vh;
+}
+.adminAddProduct button {
+  padding: 20px;
+  font-size: 1.3rem;
+  background-color: #93d84d;
+  font-weight: bold;
+}
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.adminCreateContainer {
+  width: 50vw;
+  margin: 2rem auto;
+  height: 800px;
+  font-size: 2rem;
+  background-color: rgba(128, 128, 128, 0.15);
+  padding: 20px 40px;
+  border: 2px solid;
+  border-radius: 10px;
+  position: relative;
+}
+.adminCreateForm {
+  height: 660px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.adminCreateContainer h1 {
+  margin-bottom: 1rem;
+}
+.adminCreateContainer form button {
+  cursor: pointer;
+}
+.adminCreateContainer form input,
+.adminCreateContainer form button,
+.adminCreateContainer form textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.5rem;
+}
+.adminEditGoBack {
+  position: absolute;
+  top: 45px;
+  right: 4%;
+  height: 60px;
+  padding: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}

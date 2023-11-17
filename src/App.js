@@ -24,6 +24,9 @@ import Payment from "./pages/payment/payment.component";
 import Order from "./pages/order/order.component";
 import MyOrders from "./pages/order/myOrders.component";
 import OrderDetails from "./pages/order/orderDetails.components";
+import AdminProducts from "./pages/admin/adminProducts.component";
+import AdminCreateProduct from "./pages/admin/adminCreateProduct.component";
+import AdminEditProduct from "./pages/admin/adminEditProduct.component";
 
 function App() {
   return (
@@ -53,17 +56,17 @@ function App() {
         <Route exact path="/order" element={<Order />} />
         <Route exact path="/user/myorders" element={<MyOrders />} />
         <Route exact path="/order/:id" element={<OrderDetails />} />
-        {/* <Route exact path="/admin/products" element={<AdminProducts/>} />
+        <Route exact path="/admin/products" element={<AdminProducts />} />
         <Route
           exact
           path="/admin/createProduct"
-          element={<AdminCreateProduct/>}
+          element={<AdminCreateProduct />}
         />
         <Route
           exact
           path="/admin/editProduct/:id"
-          element={<AdminEditProduct/>}
-        /> */}
+          element={<AdminEditProduct />}
+        />
       </Routes>
     </BrowserRouter>
   );
