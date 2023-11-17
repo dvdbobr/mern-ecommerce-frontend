@@ -11,7 +11,7 @@ import "./components/checkoutBreadCrumbs/breadcrumbs.css";
 import "./pages/shipment/shipment.css";
 import "./pages/payment/payment.css";
 import "./pages/order/order.css";
-// import "./pages/admin/adminProduct.css";
+import "./pages/admin/adminProduct.css";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/home.component";

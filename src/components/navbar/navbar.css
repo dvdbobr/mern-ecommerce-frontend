@@ -22,10 +22,6 @@
   position: relative;
 }
 
-.navbar-right div {
-  margin-right: 20px;
-}
-
 .searchInput {
   position: absolute;
   left: 400px;
@@ -108,8 +104,7 @@
 .logoutArrow {
   position: absolute;
   right: 0;
-  top: 10px;
-  /* padding-top: 12px; */
+  top: 5px;
 }
 
 .logoutModal {

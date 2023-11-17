@@ -51,3 +51,8 @@ button:hover {
   font-size: 1.3rem;
   font-weight: bold;
 }
+
+.adminDelete:hover,
+.adminEdit:hover {
+  cursor: pointer;
+}

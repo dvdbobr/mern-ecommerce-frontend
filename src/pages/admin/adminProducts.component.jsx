@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-//import axios from 'axios'
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/navbar.component";
@@ -82,7 +81,7 @@ const AdminProducts = () => {
                   <th>CATEGORY</th>
                   <th>PRICE</th>
                   <th>IN STOCK</th>
-                  <th colspan="2"></th>
+                  <th colSpan="2"></th>
                 </tr>
               </thead>
               <tbody>
@@ -100,12 +99,16 @@ const AdminProducts = () => {
                       <td>{product.countInStock}</td>
                       <td>
                         <BsTrash
+                          className="adminDelete"
                           onClick={() => deleteHandler(product.productID)}
+                          color="red"
                         />
                       </td>
                       <td>
                         <FiEdit
+                          className="adminEdit"
                           onClick={() => editHandler(product.productID)}
+                          color="green"
                         />
                       </td>
                     </tr>
