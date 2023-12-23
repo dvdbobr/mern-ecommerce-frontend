@@ -153,12 +153,6 @@
   font-size: 1.3rem;
 }
 
-.hamburgerMenu {
-  /* position: absolute;
-    top: 17px;
-    left: 48px; */
-}
-
 .hamburgerMenu:hover {
   cursor: pointer;
 }

@@ -12,6 +12,7 @@ import "./pages/shipment/shipment.css";
 import "./pages/payment/payment.css";
 import "./pages/order/order.css";
 import "./pages/admin/adminProduct.css";
+import "./components/phone/phone.css";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/home.component";
@@ -27,10 +28,12 @@ import OrderDetails from "./pages/order/orderDetails.components";
 import AdminProducts from "./pages/admin/adminProducts.component";
 import AdminCreateProduct from "./pages/admin/adminCreateProduct.component";
 import AdminEditProduct from "./pages/admin/adminEditProduct.component";
+import Phone from "./components/phone/phone.component";
 
 function App() {
   return (
     <BrowserRouter>
+      <Phone />
       <Routes>
         <Route index element={<Home />} />
         <Route path="home" element={<Home />} />
